@@ -13,5 +13,11 @@ namespace LuxuryWatches.U_Controls
         {
 
         }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string tukhoa = txtTuKhoa.Value;
+            Response.RedirectToRoute("timkiem", new { tukhoa = tukhoa });
+        }
     }
 }

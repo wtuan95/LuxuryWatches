@@ -34,7 +34,7 @@
                         <p>
                             Tel:0838911361, 
                         <span>Fax:190-4509-494</span>
-                            Email: <a href="mailto:giaiphapviet@email.com">giaiphapviet@gmail.com</a>
+                            Email: <a href="#">luxuryshop@gmail.com</a>
                         </p>
                     </div>
                 </div>

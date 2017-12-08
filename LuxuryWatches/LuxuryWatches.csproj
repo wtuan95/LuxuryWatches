@@ -234,6 +234,7 @@
     <Content Include="js\simpleCart.min.js" />
     <Content Include="Pages\Blog\PostContent.aspx" />
     <Content Include="Pages\SanPham\ChiTiet.aspx" />
+    <Content Include="Pages\SanPham\SearchResult.aspx" />
     <Content Include="Pages\SanPham\TheoHangSX.aspx" />
     <Content Include="Pages\SanPham\TheoLoai.aspx" />
     <Content Include="Pages\ShoppingCart\AddToCart.aspx" />
@@ -643,6 +644,13 @@
     </Compile>
     <Compile Include="Pages\SanPham\ChiTiet.aspx.designer.cs">
       <DependentUpon>ChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SanPham\SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SanPham\SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SanPham\TheoHangSX.aspx.cs">
       <DependentUpon>TheoHangSX.aspx</DependentUpon>

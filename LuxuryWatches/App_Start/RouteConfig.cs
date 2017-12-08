@@ -23,7 +23,7 @@ namespace LuxuryWatches
             routes.MapPageRoute("blog", "blog", "~/Pages/Blog/Default.aspx");
             routes.MapPageRoute("postcontent", "blog/{bidanh}.html", "~/Pages/Blog/PostContent.aspx");
             routes.MapPageRoute("gioithieu", "gioi-thieu", "~/About.aspx");
-
+            routes.MapPageRoute("timkiem", "tim-kiem", "~/Pages/SanPham/SearchResult.aspx");
         }
     }
 }
