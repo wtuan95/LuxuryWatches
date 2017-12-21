@@ -8,6 +8,10 @@ namespace LuxuryWatches.Data
     public class SanPhamBLL
     {
         LuxuryWatchesEntities db = new LuxuryWatchesEntities();
+        public IEnumerable<sanPham> LayDanhSach()
+        {
+            return db.sanPhams.OrderByDescending(m => m.maSP).ToList();
+        }
         public IQueryable<sanPham> LaySanPhamMoiNhat()
         {
             return db.sanPhams.OrderByDescending(m => m.maSP).Take(8);
