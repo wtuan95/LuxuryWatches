@@ -16,7 +16,8 @@
                     <table id="dataTable" class="table table-bordered table-condensed table-hover table-striped">
                         <thead>
                             <tr>
-                                <th class="sorting_asc_disabled sorting_desc_disabled">Tên sản phẩm</th>
+                                <th>Mã sp</th>
+                                <th>Tên sản phẩm</th>
                                 <th>Giá bán</th>
                                 <th>Số lượng tồn</th>
                                 <th>Ngày đăng</th>
@@ -29,7 +30,9 @@
                             <asp:Repeater ID="repeaterSanPham" runat="server" DataSourceID="objSourceSanPham" ItemType="LuxuryWatches.Data.sanPham">
                                 <ItemTemplate>
                                     <tr>
-                                     
+                                        <td>
+                                           <%# Eval("maSP") %>
+                                        </td>
                                         <td>
                                             <a href="<%# GetRouteUrl("chitietsp",new { masp = Eval("maSP"), bidanh = Eval("biDanh") }) %>" target="_blank"><%# Eval("tenSP") %></a>
                                         </td>
@@ -46,10 +49,10 @@
                                             <%# Eval("tkThanhVien") %> 
                                         </td>
                                         <td>
-                                            <a href="Info.aspx?MaSanPham=<%# Eval("maSP") %>" class="btn btn-primary btn-sm">Xem/Sửa</a>
+                                            <a href="Info.aspx?maSP=<%# Eval("maSP") %>" class="btn btn-primary btn-sm">Thông tin</a>
                                         </td>
                                           <td>
-                                            <a href="Delete.aspx?MaSanPham=<%# Eval("maSP") %>" class="btn btn-default btn-sm">Xóa</a>
+                                            <a onclick="return confirm('Xác nhận xóa <%# Eval("tenSP") %> ?');" href="Delete.aspx?maSP=<%# Eval("maSP") %>" class="btn btn-default btn-sm">Xóa</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

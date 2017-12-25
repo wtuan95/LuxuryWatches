@@ -19,6 +19,8 @@ namespace LuxuryWatches.Pages.SanPham
             {
                 Response.Redirect("/StaticPages/404.html");
             }
+            sp.soLanQT++;
+            db.Entry(sp).State = System.Data.Entity.EntityState.Modified;
             Page.Title = sp.tenSP;
             literalBreadCrumb.Text = sp.tenSP;
         }

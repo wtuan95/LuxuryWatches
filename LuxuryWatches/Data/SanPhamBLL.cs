@@ -12,6 +12,63 @@ namespace LuxuryWatches.Data
         {
             return db.sanPhams.OrderByDescending(m => m.maSP).ToList();
         }
+        public void Edit(int maSP, string tenSP,  string maLoai, string maHangSX, string ndTomTat, int giaBan, int daGiamGia, int soLuong,
+            string biDanh, string ndSanPham, string mauSac, string kichCo, int danhGia, string hinhDaiDienMoi)
+        {
+            sanPham sp = db.sanPhams.Find(maSP);
+            sp.tenSP = tenSP;
+            sp.maLoai = maLoai;
+            if(!string.IsNullOrEmpty(hinhDaiDienMoi))
+            {
+                sp.hinhDaiDien = hinhDaiDienMoi;
+            }
+            sp.maHangSX = maHangSX;
+            sp.ndTomTat = ndTomTat;
+            sp.giaBan = giaBan;
+            sp.daGiamGia = daGiamGia;
+            sp.soLuong = soLuong;
+            sp.biDanh = biDanh;
+            sp.ndSanPham = ndSanPham;
+            sp.mauSac = mauSac;
+            sp.kichCo = sp.kichCo;
+            sp.danhGia = sp.danhGia;
+            db.Entry(sp).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+        }
+
+        public void Create(string tenSP, string hinhDaiDien, string maLoai, string maHangSX, string ndTomTat, int giaBan, int daGiamGia, int soLuong,
+           string biDanh, string ndSanPham, string mauSac, string kichCo, string tkThanhVien)
+        {
+            sanPham sp = new sanPham();
+            sp.tenSP = tenSP;
+            sp.hinhDaiDien = hinhDaiDien;
+            sp.maLoai = maLoai;
+            sp.maHangSX = maHangSX;
+            sp.ndTomTat = ndTomTat;
+            sp.giaBan = giaBan;
+            sp.daGiamGia = daGiamGia;
+            sp.soLuong = soLuong;
+            sp.biDanh = biDanh;
+            sp.ndSanPham = ndSanPham;
+            sp.mauSac = mauSac;
+            sp.kichCo = sp.kichCo;
+            sp.ngayDangSP = DateTime.Now;
+            sp.soLanGD = 0;
+            sp.soLanQT = 0;
+            sp.danhGia = 0;
+            sp.tkThanhVien = tkThanhVien;
+            db.sanPhams.Add(sp);
+            db.SaveChanges();
+
+        }
+
+        public void Delete(int maSP)
+        {
+            sanPham spXoa = db.sanPhams.Find(maSP);
+            db.sanPhams.Remove(spXoa);
+            db.SaveChanges();
+        }
         public IQueryable<sanPham> LaySanPhamMoiNhat()
         {
             return db.sanPhams.OrderByDescending(m => m.maSP).Take(8);

@@ -17,15 +17,14 @@ namespace LuxuryWatches.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public taiKhoan()
         {
-            this.hopThus = new HashSet<hopThu>();
             this.baiViets = new HashSet<baiViet>();
+            this.hopThus = new HashSet<hopThu>();
             this.sanPhams = new HashSet<sanPham>();
         }
     
         public string tkThanhVien { get; set; }
         public string matKhau { get; set; }
         public System.DateTime ngayCap { get; set; }
-        public string maQuyen { get; set; }
         public string hoTV { get; set; }
         public string tenTV { get; set; }
         public bool gioiTinh { get; set; }
@@ -39,10 +38,9 @@ namespace LuxuryWatches.Data
         public string ghiChu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<hopThu> hopThus { get; set; }
-        public virtual quyen quyen { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<baiViet> baiViets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<hopThu> hopThus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<sanPham> sanPhams { get; set; }
     }

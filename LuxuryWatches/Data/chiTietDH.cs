@@ -16,6 +16,8 @@ namespace LuxuryWatches.Data
     {
         public int maDH { get; set; }
         public int maSP { get; set; }
+        public string KichCo { get; set; }
+        public string MauSac { get; set; }
         public int soLuong { get; set; }
         public int giaBan { get; set; }
     

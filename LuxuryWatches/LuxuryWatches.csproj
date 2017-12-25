@@ -123,11 +123,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ckeditor\" />
+    <Folder Include="ckfinder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\Pages\Menu.ascx" />
+    <Content Include="Admin\Pages\QLDonHang\Default.aspx" />
+    <Content Include="Admin\Pages\QLDonHang\Delete.aspx" />
+    <Content Include="Admin\Pages\QLDonHang\Edit.aspx" />
+    <Content Include="Admin\Pages\QLHopThu\Default.aspx" />
+    <Content Include="Admin\Pages\QLHopThu\Delete.aspx" />
+    <Content Include="Admin\Pages\QLHopThu\Edit.aspx" />
+    <Content Include="Admin\Pages\QLSanPham\Create.aspx" />
     <Content Include="Admin\Pages\QLSanPham\Default.aspx" />
+    <Content Include="Admin\Pages\QLSanPham\Delete.aspx" />
+    <Content Include="Admin\Pages\QLSanPham\Info.aspx" />
     <Content Include="assets\css\countdown.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\css\main.min.css" />
@@ -714,6 +726,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flexslider.css" />
     <Content Include="css\memenu.css" />
+    <Content Include="css\popupimage\style.css" />
     <Content Include="css\style.css" />
     <Content Include="Data\LuxuryWatchesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -849,6 +862,7 @@
     <Content Include="js\memenu.js" />
     <Content Include="js\responsiveslides.min.js" />
     <Content Include="js\simpleCart.min.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Pages\Blog\PostContent.aspx" />
     <Content Include="Pages\SanPham\ChiTiet.aspx" />
     <Content Include="Pages\SanPham\SearchResult.aspx" />
@@ -858,6 +872,7 @@
     <Content Include="Pages\ShoppingCart\Default.aspx" />
     <Content Include="Pages\ShoppingCart\DeleteFromCart.aspx" />
     <Content Include="Pages\Blog\Default.aspx" />
+    <Content Include="photos\admin\thienvu.jpg" />
     <Content Include="photos\blog\tu-dien-thuat-ngu-de-choi-dong-ho-rolex-thuy-sy-chinh-hang.jpg" />
     <Content Include="StaticPages\404.html" />
     <Content Include="StaticPages\500.html" />
@@ -986,6 +1001,13 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Pages\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -993,12 +1015,75 @@
     <Compile Include="Admin\Pages\Menu.ascx.designer.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLDonHang\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLHopThu\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Pages\QLSanPham\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Pages\QLSanPham\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pages\QLSanPham\Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -1011,6 +1096,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Data\BaiVietBLL.cs" />
     <Compile Include="Data\CartItem.cs" />
+    <Compile Include="Data\donHangBLL.cs" />
+    <Compile Include="Data\hopThuBLL.cs" />
     <Compile Include="Data\HSXBLL.cs" />
     <Compile Include="Data\loaiSPBLL.cs" />
     <Compile Include="Data\SanPhamBLL.cs" />
@@ -1054,15 +1141,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LuxuryWatchesModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\quyen.cs">
+    <Compile Include="Data\sanPham.cs">
       <DependentUpon>LuxuryWatchesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\sanPham.cs">
+    <Compile Include="Data\sysdiagram.cs">
       <DependentUpon>LuxuryWatchesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\taiKhoan.cs">
       <DependentUpon>LuxuryWatchesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\taiKhoanBLL.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1268,6 +1356,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Blog\PostContent.aspx.cs">
       <DependentUpon>PostContent.aspx</DependentUpon>

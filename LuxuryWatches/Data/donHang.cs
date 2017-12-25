@@ -22,7 +22,6 @@ namespace LuxuryWatches.Data
     
         public int maDH { get; set; }
         public string tenKH { get; set; }
-        public bool gioiTinh { get; set; }
         public string soDT { get; set; }
         public string diaChi { get; set; }
         public string email { get; set; }
@@ -30,7 +29,7 @@ namespace LuxuryWatches.Data
         public int tongThanhTien { get; set; }
         public System.DateTime tdDatHang { get; set; }
         public bool daGiaoHang { get; set; }
-        public System.DateTime tdGiaoHang { get; set; }
+        public Nullable<System.DateTime> tdGiaoHang { get; set; }
         public string ghiChu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

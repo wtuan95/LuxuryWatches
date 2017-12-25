@@ -25,14 +25,14 @@ namespace LuxuryWatches.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<chiTietDH> chiTietDHs { get; set; }
-        public virtual DbSet<donHang> donHangs { get; set; }
-        public virtual DbSet<HangSanXuat> HangSanXuats { get; set; }
         public virtual DbSet<hopThu> hopThus { get; set; }
-        public virtual DbSet<quyen> quyens { get; set; }
-        public virtual DbSet<taiKhoan> taiKhoans { get; set; }
-        public virtual DbSet<loaiSP> loaiSPs { get; set; }
         public virtual DbSet<baiViet> baiViets { get; set; }
+        public virtual DbSet<taiKhoan> taiKhoans { get; set; }
         public virtual DbSet<sanPham> sanPhams { get; set; }
+        public virtual DbSet<HangSanXuat> HangSanXuats { get; set; }
+        public virtual DbSet<loaiSP> loaiSPs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<donHang> donHangs { get; set; }
+        public virtual DbSet<chiTietDH> chiTietDHs { get; set; }
     }
 }

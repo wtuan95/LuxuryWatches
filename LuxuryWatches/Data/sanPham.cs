@@ -40,10 +40,10 @@ namespace LuxuryWatches.Data
         public int soLanGD { get; set; }
         public System.DateTime ngayDangSP { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<chiTietDH> chiTietDHs { get; set; }
+        public virtual taiKhoan taiKhoan { get; set; }
         public virtual HangSanXuat HangSanXuat { get; set; }
         public virtual loaiSP loaiSP { get; set; }
-        public virtual taiKhoan taiKhoan { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<chiTietDH> chiTietDHs { get; set; }
     }
 }
