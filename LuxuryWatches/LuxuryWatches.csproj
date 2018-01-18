@@ -863,6 +863,7 @@
     <Content Include="js\responsiveslides.min.js" />
     <Content Include="js\simpleCart.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Logoff.aspx" />
     <Content Include="Pages\Blog\PostContent.aspx" />
     <Content Include="Pages\SanPham\ChiTiet.aspx" />
     <Content Include="Pages\SanPham\SearchResult.aspx" />
@@ -1363,6 +1364,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logoff.aspx.cs">
+      <DependentUpon>Logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logoff.aspx.designer.cs">
+      <DependentUpon>Logoff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Blog\PostContent.aspx.cs">
       <DependentUpon>PostContent.aspx</DependentUpon>
