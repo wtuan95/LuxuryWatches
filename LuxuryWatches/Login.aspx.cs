@@ -17,7 +17,7 @@ namespace LuxuryWatches
         protected void btnDangnhap_Click(object sender, EventArgs e)
         {
             taiKhoanBLL tkBLL = new taiKhoanBLL();
-            taiKhoan tk = tkBLL.Login(txtTaikhoan.Value, txtMatkhau.Value);
+            taiKhoan tk = tkBLL.AdminLogin(txtTaikhoan.Value, txtMatkhau.Value);
             if(tk == null)
             {
                 lblLoi.InnerText = "Sai tài khoản hoặc mật khẩu!";

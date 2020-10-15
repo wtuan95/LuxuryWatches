@@ -48,8 +48,12 @@
         <!--top-header-->
 	<div class="top-header">
 		<div class="container">
-			<div class="top-header-main">		
-				<div class="col-md-6 col-md-offset-6  top-header-left">
+			<div class="top-header-main top-header-left">
+                <p class="col-md-6">
+                    <a href="/dang-nhap" style="color:#fff">Đăng Nhập&nbsp;</a>
+                    <a href="/dang-ky" style="color:#fff">&nbsp;Đăng Ký</a>
+                </p>
+				<div class="col-md-6 top-header-left">
                     <div class="cart box_1">
                         <a href="<%: GetRouteUrl("shoppingcart",null) %>">
                             <div class="total">
@@ -57,7 +61,7 @@
                             </div>
                             <img src="/images/cart-1.png" alt="" />
                         </a>
-                        <p><a href="<%: GetRouteUrl("shoppingcart",null) %>" class="simpleCart_empty">Giỏ hàng</a></p>
+                        <p><a href="<%: GetRouteUrl("shoppingcart",null) %>" class="simpleCart_empty">Giỏ Hàng</a></p>
 
                         <div class="clearfix"></div>
                     </div>

@@ -433,8 +433,8 @@
             <asp:FormParameter DbType="String" FormField="biDanh" Name="biDanh" />
             <asp:FormParameter FormField="ndSanPham" Name="ndSanPham" />
             <asp:FormParameter FormField="mauSac" Name="mauSac" />
-            <asp:FormParameter DbType="String" FormField="kichCo" Name="kichCo" />
-            <asp:FormParameter DbType="Int32" FormField="danhGia" Name="danhGia" />
+            <asp:FormParameter FormField="kichCo" Name="kichCo" />
+            <asp:FormParameter FormField="danhGia" Name="danhGia" />
             <asp:Parameter DbType="String" Name="hinhDaiDienMoi" />
         </UpdateParameters>
     </asp:ObjectDataSource>

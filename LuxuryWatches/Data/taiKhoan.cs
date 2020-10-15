@@ -36,6 +36,7 @@ namespace LuxuryWatches.Data
         public string dcLienLac { get; set; }
         public bool duocSD { get; set; }
         public string ghiChu { get; set; }
+        public string Quyen { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<baiViet> baiViets { get; set; }

@@ -131,6 +131,7 @@
           <Property Name="dcLienLac" Type="nvarchar" MaxLength="168" />
           <Property Name="duocSD" Type="bit" Nullable="false" />
           <Property Name="ghiChu" Type="ntext" />
+          <Property Name="Quyen" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK__baiViet__tkThanh__1BFD2C07">
           <End Role="taiKhoan" Type="Self.taiKhoan" Multiplicity="1" />
@@ -354,6 +355,7 @@
           <NavigationProperty Name="baiViets" Relationship="LuxuryWatchesModel.FK__baiViet__tkThanh__1BFD2C07" FromRole="taiKhoan" ToRole="baiViet" />
           <NavigationProperty Name="hopThus" Relationship="LuxuryWatchesModel.FK_hopThu_taiKhoan" FromRole="taiKhoan" ToRole="hopThu" />
           <NavigationProperty Name="sanPhams" Relationship="LuxuryWatchesModel.FK__sanPham__tkThanh__29572725" FromRole="taiKhoan" ToRole="sanPham" />
+          <Property Name="Quyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK__baiViet__tkThanh__1BFD2C07">
           <End Type="LuxuryWatchesModel.taiKhoan" Role="taiKhoan" Multiplicity="1" />
@@ -571,6 +573,7 @@
           <EntitySetMapping Name="taiKhoans">
             <EntityTypeMapping TypeName="LuxuryWatchesModel.taiKhoan">
               <MappingFragment StoreEntitySet="taiKhoan">
+                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
                 <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
                 <ScalarProperty Name="duocSD" ColumnName="duocSD" />
                 <ScalarProperty Name="dcLienLac" ColumnName="dcLienLac" />

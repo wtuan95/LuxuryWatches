@@ -11,12 +11,12 @@ namespace LuxuryWatches.U_Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtTuKhoa.Attributes.Add("placeholder", "Nhập tên sản phẩm cần tìm...");
         }
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string tukhoa = txtTuKhoa.Value;
+            string tukhoa = txtTuKhoa.Text;
             Response.RedirectToRoute("timkiem", new { tukhoa = tukhoa });
         }
     }

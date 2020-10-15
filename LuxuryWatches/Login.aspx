@@ -10,7 +10,7 @@
     <!--Mobile first-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login Page</title>
+    <title>Đăng Nhập Trang Quản Trị</title>
 
     <meta name="description" content="Free Admin Template Based On Twitter Bootstrap 3.x">
     <meta name="author" content="">
@@ -56,11 +56,11 @@
             <div class="tab-content">
                 <div id="login" class="tab-pane active">
                         <p class="text-muted text-center">
-                            Enter your username and password
+                            Đăng Nhập Vào Trang Quản Trị
                         </p>
-                        <input type="text" id="txtTaikhoan" runat="server" required="required" placeholder="Username" class="form-control top">
-                        <input type="password" id="txtMatkhau" runat="server" required="required" placeholder="Password" class="form-control bottom">
-                        <asp:Button ID="btnDangnhap" CssClass="btn btn-lg btn-primary btn-block" runat="server" OnClick="btnDangnhap_Click" Text="Sign in" />
+                        <input type="text" id="txtTaikhoan" runat="server" required="required" placeholder="Nhập tài khoản" class="form-control top">
+                        <input type="password" id="txtMatkhau" runat="server" required="required" placeholder="Nhập mật khẩu" class="form-control bottom">
+                        <asp:Button ID="btnDangnhap" CssClass="btn btn-lg btn-primary btn-block" runat="server" OnClick="btnDangnhap_Click" Text="Đăng nhập" />
                         <label class="text-danger" id="lblLoi" runat="server"></label>
                 </div>
             </div>

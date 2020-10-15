@@ -8,9 +8,13 @@ namespace LuxuryWatches.Data
     public class taiKhoanBLL
     {
         LuxuryWatchesEntities db = new LuxuryWatchesEntities();
-        public taiKhoan Login(string tkThanhVien, string matkhau)
+        public taiKhoan AdminLogin(string tkThanhVien, string matkhau)
         {
-            return db.taiKhoans.SingleOrDefault(m => m.tkThanhVien == tkThanhVien && m.matKhau == matkhau);
+            return db.taiKhoans.FirstOrDefault(m => m.Quyen == "admin" && m.tkThanhVien == tkThanhVien && m.matKhau == matkhau);
+        }
+        public taiKhoan MemberLogin(string tkThanhVien, string matkhau)
+        {
+            return db.taiKhoans.FirstOrDefault(m => m.Quyen == "member" && m.tkThanhVien == tkThanhVien && m.matKhau == matkhau);
         }
     }
 }

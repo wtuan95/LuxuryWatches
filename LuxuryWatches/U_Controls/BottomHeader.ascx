@@ -28,7 +28,8 @@
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="LayDanhSach" TypeName="LuxuryWatches.Data.loaiSPBLL"></asp:ObjectDataSource>
 			<div class="col-md-3 header-right"> 
 				<div class="search-bar">
-                        <input type="text" id="txtTuKhoa" runat="server" placeholder="Tìm kiếm" name="tukhoa" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTuKhoa" CssClass="text-danger" Display="Dynamic" ErrorMessage="Bạn chưa nhập tên sản phẩm cần tìm" ValidationGroup="timkiem"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtTuKhoa" ValidationGroup="timkiem"  runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTuKhoa" CssClass="text-danger" Display="Dynamic" ErrorMessage="Bạn chưa nhập tên sản phẩm cần tìm" ValidationGroup="timkiem"></asp:RequiredFieldValidator>
 &nbsp;<asp:Button ID="btnTimKiem" OnClick="btnTimKiem_Click" ValidationGroup="timkiem" runat="server"  />
                         
 				</div>
